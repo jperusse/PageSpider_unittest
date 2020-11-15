@@ -9,7 +9,7 @@ class TestDBUtils(unittest.TestCase):
         self.assertTrue(results)
 
     def test_save_words_to_database(self):
-        results = save_words_to_database("word.db", ["word1", "word2"])
+        results = save_words_to_database("word.db", ["word1", "word2", "word3"])
         self.assertTrue(results)
 
 
