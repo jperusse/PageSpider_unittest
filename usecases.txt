@@ -6,7 +6,7 @@ TDD
 Read a file containing a list of urls
 Read a download url page
 Search for the next word on page
-Add word to the dictionary
+Add word to the database
 Repeat for all words found on page
 print a page report containing each word and frequency of found
 Repeat for the remaining urls

@@ -4,7 +4,7 @@ from utilities.database_utilities import save_words_to_database
 
 
 class TestDBUtils(unittest.TestCase):
-    def test_read_file_with_urls(self):
+    def test_create_database(self):
         results = create_database("word.db")
         self.assertTrue(results)
 

@@ -2,6 +2,14 @@ import os
 import argparse
 
 
+class PageReport:
+    def create_page_report(self):
+        return True
+
+    def print_page_report(self):
+        return True
+
+
 def main(database: str, url_file_list: str):
     print("We are going to work with " + database)
     print("We are going to scan " + url_file_list)
