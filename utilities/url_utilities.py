@@ -1,6 +1,11 @@
 def load_urls_from_file(file_path: str):
-    # TODO: add the code needed to read the text file with the urls in it
-    return "pass"
+    url = []
+    try:
+        with open(file_path) as f:
+            url.append(f.readline())
+            return url
+    except:
+        return url
 
 
 def load_page(url: str):
