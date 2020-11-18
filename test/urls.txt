@@ -1,2 +1,2 @@
-https://www.google.com
-https://www.google.com
+https://en.wikipedia.org/wiki/Python_(programming_language)
+https://en.wikipedia.org/wiki/Guido_van_Rossum

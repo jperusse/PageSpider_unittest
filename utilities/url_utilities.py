@@ -6,13 +6,13 @@ from bs4 import BeautifulSoup
 
 
 def load_urls_from_file(file_path: str):
-    url = []
+    urls = []
     try:
         with open(file_path) as f:
-            url.append(f.readline())
-            return url
+            urls.append(f.readline())
+            return urls
     except FileNotFoundError:
-        return url
+        return urls
 
 
 def load_page(url: str):

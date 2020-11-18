@@ -6,18 +6,19 @@ from utilities.url_utilities import scrape_page
 
 class TestURLUtils(unittest.TestCase):
     def setUp(self):
-        self.url1 = "https//:www.google.com"
+        urls = []
+        self.url1 = "http//:www.example.com/"
 
     def tearDown(self):
         pass
 
     def test_read_file_with_urls_missing_file(self):
-        urls = load_urls_from_file("missing_file.txt")
-        self.assertEqual(len(urls), 0)
+        self.urls = load_urls_from_file("missing_file.txt")
+        self.assertEqual(len(self.urls), 0)
 
     def test_read_file_with_urls_none_in_file(self):
-        urls = load_urls_from_file("urls0.txt")
-        self.assertEqual(urls, [''])
+        self.urls = load_urls_from_file("urls0.txt")
+        self.assertEqual(self.urls, [''])
 
     def test_read_file_with_urls1(self):
         urls = load_urls_from_file("urls1.txt")
