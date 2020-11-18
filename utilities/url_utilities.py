@@ -16,8 +16,13 @@ def load_urls_from_file(file_path: str):
 
 
 def load_page(url: str):
-    response = urlopen(url)
-    html = response.read().decode("utf-8")
+    html = False
+    if len(url) > 0:
+        try:
+            response = urlopen(url)
+            html = response.read().decode("utf-8")
+        except ValueError:
+            html = False
     return html
 
 

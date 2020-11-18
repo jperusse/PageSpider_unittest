@@ -6,7 +6,7 @@ from utilities.url_utilities import scrape_page
 
 class TestURLUtils(unittest.TestCase):
     def setUp(self):
-        urls = []
+        # urls = []
         self.url1 = "https://en.wikipedia.org/wiki/Python_(programming_language)"
 
     def tearDown(self):
@@ -32,10 +32,18 @@ class TestURLUtils(unittest.TestCase):
         html = load_page(self.url1)
         self.assertTrue(html)
 
+    def test_load_page_missing_url(self):
+        html = load_page('')
+        self.assertFalse(html)
+
+    def test_load_page_url_not_found(self):
+        html = load_page("https//:www.badurl.com")
+        self.assertFalse(html)
+
     def test_scrape_page(self):
         html = load_page(self.url1)
-        results = scrape_page(page_contents=html)
-        self.assertTrue(results)
+        clean_words = scrape_page(page_contents=html)
+        self.assertTrue(clean_words)
 
 
 if __name__ == '__main__':
