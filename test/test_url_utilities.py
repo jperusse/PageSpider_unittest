@@ -1,7 +1,5 @@
 import unittest
-from utilities.url_utilities import load_urls_from_file
-from utilities.url_utilities import load_page
-from utilities.url_utilities import scrape_page
+from utilities.url_utilities import load_page, load_urls_from_file, scrape_page
 
 
 class TestURLUtils(unittest.TestCase):
