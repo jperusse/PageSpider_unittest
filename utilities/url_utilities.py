@@ -9,7 +9,7 @@ def load_urls_from_file(file_path: str):
     urls = []
     try:
         with open(file_path) as f:
-            urls.append(f.readline())
+            urls.extend(f.readlines())
             return urls
     except FileNotFoundError:
         return urls
